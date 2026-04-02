@@ -1,0 +1,48 @@
+# Ashby — Org-Wide Config
+
+API plumbing shared across all jobs and skills. These rarely change.
+
+## Sources (candidate attribution)
+| Source | ID |
+|--------|-----|
+| WAAS (Work at a Startup) | `<your-waas-source-id>` |
+| Applied (direct) | `<your-applied-source-id>` |
+| Chrome Extension (sourced) | `<your-chrome-ext-source-id>` |
+| Jack and Jill | `<your-jj-source-id>` |
+
+## Archive Reasons
+| Reason | ID |
+|--------|-----|
+| Not a good match | `<your-archive-reason-id>` |
+
+## Interview Feedback
+
+Use these when submitting interview feedback via `application_feedback_submit`.
+Slack, user IDs, and feedback form IDs are in `user.md`.
+
+### Fields
+| Path | Type | Values |
+|------|------|--------|
+| `overall_recommendation` | ValueSelect | `4` = Strong Yes, `3` = Yes, `2` = No, `1` = Strong No |
+| `feedback` | RichText | `{"type": "PlainText", "value": "your text"}` |
+
+### Rules
+1. **Always attach feedback to an interview event.** Look up the interview schedule for the application (`interview_schedule_list`), find the relevant `interviewEventId`, and pass it to the submit call. Never submit standalone feedback when an interview event exists.
+2. **Never use `candidate_create_note` as a substitute for feedback.** Notes and feedback are different things in Ashby. Feedback has a score and is attached to an interview; notes are freeform comments on the candidate.
+3. **Workflow:** `interview_schedule_list(applicationId)` → get `interviewEvents[].id` → `application_feedback_submit(applicationId, formDefinitionId, interviewEventId, feedbackForm, userId)`
+
+## Email Style
+
+**No hard line wrapping.** Write each paragraph as a single continuous line — let the email client handle wrapping. Never insert newlines within a paragraph for formatting. Only use newlines between paragraphs.
+
+## Gmail
+
+Hiring manager email is in `user.md`.
+
+### Draft tool
+**Always use `mcp__claude_ai_Gmail__gmail_create_draft`** (not `mcp__gmail-drafts__gmail_create_draft`) when creating email drafts. Set `contentType: "text/html"` and wrap the body in `<p>` tags with `<br><br>` between paragraphs. The `gmail-drafts` tool only supports `text/plain`, which causes Gmail to hard-wrap lines at ~78 characters per RFC 2822 — making emails look broken.
+
+To send a draft created with `mcp__claude_ai_Gmail__gmail_create_draft`, use `mcp__gmail-drafts__gmail_send_draft` with the `draftId` returned.
+
+### Known noise senders
+See `user.md` for the full list of noise senders to exclude from inbox checks.

@@ -1,0 +1,9 @@
+# Secrets and user-specific config (ship .example files instead)
+**/CLAUDE.local.md
+**/user.md
+**/ashby.md
+**/jobs/*.md
+!**/jobs/*.md.example
+
+# OS
+.DS_Store

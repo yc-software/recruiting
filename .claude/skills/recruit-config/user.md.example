@@ -1,0 +1,54 @@
+# User Config
+
+All user-specific values for the recruiting skills. New users: fill this out and all skills will pick it up.
+
+## Hiring Manager
+
+| Key               | Value                                          |
+| ----------------- | ---------------------------------------------- |
+| Name              | Your Name                                      |
+| First name        | Your First Name                                |
+| Email             | you@yourcompany.com                            |
+| Zoom link         | https://zoom.us/my/your-zoom-link              |
+| Office address    | 335 Pioneer Way, Mountain View, CA 94041       |
+| Office short name | Mountain View                                  |
+| Timezone          | America/Los_Angeles                            |
+
+## Slack
+
+| Key                 | Value                                    |
+| ------------------- | ---------------------------------------- |
+| Channel             | #recruit-bot                             |
+| Channel ID          | your-channel-id                          |
+| User ID             | your-slack-user-id                       |
+| Copilot bot user ID | your-bot-user-id                         |
+| Copilot bot token   | Read from `CLAUDE.local.md` (gitignored) |
+
+## Ashby
+
+| Key                         | Value                  |
+| --------------------------- | ---------------------- |
+| User ID                     | your-ashby-user-id     |
+| Feedback form definition ID | your-feedback-form-id  |
+
+## Interviewers
+
+Team members who conduct interviews. Used by scheduling and reply skills to CC the right people.
+
+| Name           | Email                     | Role                  |
+| -------------- | ------------------------- | --------------------- |
+| Jane Smith     | jane@yourcompany.com      | Technical interview   |
+| John Doe       | john@yourcompany.com      | Hiring manager        |
+
+## Known Noise Senders
+
+Exclude these from inbox checks — they never contain candidate-relevant content.
+
+```
+theathletic.com
+noreply@modeanalytics.com
+no-reply@github.com
+hello@frontapp.com
+lyftmail.com
+uber.com
+```

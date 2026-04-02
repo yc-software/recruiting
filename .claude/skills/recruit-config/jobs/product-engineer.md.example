@@ -1,0 +1,143 @@
+# Product Engineer — Role Playbook
+
+Everything needed to recruit for this role: template, tone, candidate bar, and Ashby IDs.
+
+## Job Listings
+
+- [Product Engineer, Applications & Operations](https://www.ycombinator.com/companies/y-combinator/jobs/MsFL1rP-product-engineer-applications-operations)
+- [Product Engineer, Post Batch](https://www.ycombinator.com/companies/y-combinator/jobs/fK75gxxbq-product-engineer-post-batch) (also on [Work at a Startup](https://www.workatastartup.com))
+- [Software Product Design Engineer](https://www.ycombinator.com/companies/y-combinator/jobs/9yNWf1G-software-product-design-engineer)
+
+**Interview process doc**: https://docs.google.com/document/d/YOUR_DOC_ID/edit
+
+## Ashby Job Config
+- **Job ID**: `<your-job-id>`
+
+### Pipeline Stages
+| Stage | ID |
+|-------|-----|
+| New Lead | `<stage-id>` |
+| Reached Out | `<stage-id>` |
+| Application Review | `<stage-id>` |
+| Phone Screen | `<stage-id>` |
+| Technical Screen | `<stage-id>` |
+| Partner Interview | `<stage-id>` |
+| Onsite | `<stage-id>` |
+| Offer | `<stage-id>` |
+| Archived | `<stage-id>` |
+
+---
+
+## Outreach Template
+
+**Subject:** Reaching out from Y Combinator
+
+```
+Hi {name},
+
+My name is {hiring manager's first name from user.md} and I'm an EM and engineer on Y Combinator's software team. {PERSONALIZED_HOOK}
+
+We have a software team at YC as well, and while some aspects are similar, we focus on building a different kind of software:
+
+- We manage $6B in assets to invest in early-stage startups, including companies like Airbnb, Coinbase, Doordash, and Kalshi.
+- We build tools and leverage 20 years of startup data to power decision-making for our funds.
+- We're doing more with AI — both for investing and for our founders — than you could probably imagine. Engineers get unlimited AI tokens and use them both for development and to build AI-powered apps that our founders use every day.
+
+It's a small, 18-person team of collaborative product engineers. (We don't actually have Product Managers on our team — we're that small.) We pay well, offer carry in the fund (like equity), and YC can be a fantastic place for you to do impactful work and deepen your knowledge of startups and AI.
+
+YC is hiring for in-person roles in SF; it's the best way to get the most out of working here and have the biggest impact. (Especially since we get to attend all the events and stay connected to so many founders.)
+
+If you're open to it, I'd love to connect and share more about YC — and why our software team is such a unique place to be. Would you happen to have any time {PROPOSED_TIME} to chat?
+
+Thank you for your time, and hope to hear from you!
+
+{hiring manager's first name from user.md}
+```
+
+---
+
+## Tone & Style
+
+### Hook pattern
+"Saw that you [specific thing] at [Company] — [connection to YC]."
+
+**Hook examples by candidate type:**
+- **Founder**: "Saw that you recently stepped away from running {company}; I did my own startup in W13 and it's a hard road, for sure."
+- **Big tech**: "Saw that you've been building {specific thing} at {company} — there's a lot of that {relevant skill} on our team."
+- **Acquisition**: "Saw that you've built and led technical teams from founding through acquisition at {company} — there's a lot of that builder/owner mentality on our team."
+- **Quant/finance**: "Saw that you built {specific thing} at {company} — there's a lot of that quantitative thinking on our team, and the investing angle here might be right up your alley."
+- **Past tense** if they left the company: "Saw that you built X" not "you've been building X"
+
+### Rules
+- Never use "exactly", "perfect fit", "ideal candidate", or superlatives about the candidate
+- AI is something we USE to build products and solve operational problems — this IS a product engineering role. Never say "not AI focused" or "not as a product."
+- Warm but professional — the hiring manager is a peer engineer, not a recruiter
+- Specific, not generic — reference their actual company/project/domain
+- If candidate mentioned something specific they want (e.g., "investing", "not AI focused"), weave it into the hook — don't contradict it
+
+### Content framing
+- Lead with what YC is doing right now — Demo Day, tools the team shipped, what's being built — not with the candidate's resume
+- Frame around startups and founders, not finance/investing. What makes YC different is helping startups. Don't make it sound like another fintech job.
+- No YC-internal jargon like "post-batch mode." The candidate doesn't know what that means.
+
+---
+
+## Candidate Bar
+
+### Hard requirements
+- US work authorization — YC can hire candidates with existing US work authorization and sponsor TN visas for Canadian citizens. Candidates needing other visa sponsorship are not eligible per YC's hiring guidelines.
+- Software engineering background — must actually build things, not PM/ops/research
+- Full-stack or strong web app experience (Rails, React, or equivalent — not mobile-only, embedded, firmware, or ML-only)
+- Bay Area based or willing to be in-person at YC SF
+
+### Strong signals (lean yes)
+- Strong school or strong employer signal (top CS programs — or strong tech companies, etc.)
+- Founding engineer or early employee experience
+- Startup DNA — built things 0-to-1, comfortable with ambiguity
+- High ownership mentality
+- AI-native but not AI-obsessed — uses AI tools, not an "AI researcher" profile
+- Product sensibility — cares about what they're building, not just how
+- 2-10 years experience
+
+### Auto-archive
+- Non-engineering backgrounds (PMs, ops, data coordinators)
+- Backend-only or infra-only (no frontend/product signal)
+- Needs visa sponsorship beyond what YC offers (see hard requirements above)
+- Long tenure at large company with no indication of startup interest
+- Incomplete profiles (placeholder websites, no LinkedIn)
+- Repeat applicants who were already a no
+
+### Exception candidates
+- Extraordinary backend/ML with no frontend, but elite pedigree + investing/quant angle
+- Clear full-stack side projects with depth and domain knowledge
+- Requires explicit approval from hiring manager before proceeding
+
+---
+
+## Candidate Q&A
+
+Standard answers for common candidate questions. Use these when drafting replies.
+
+- **"Is this remote?"** → In-person in San Francisco (Dogpatch). It's the best way to get the most out of working here — we attend batch events, Demo Day, and founder dinners.
+- **"Can I use AI in the interview?"** → Absolutely. Be prepared to code with AI. If you can build AI into your app, even better.
+- **"Will you reimburse AI credits?"** → Yes, so you can go all-out.
+- **"I have a baby coming / life event..."** → We're flexible. We've had people start and then take parental leave shortly after.
+- **"What's the interview process?"** → Phone screen → Tech screen (build a full-stack app in 1 hour, use all the AI you want) → Full onsite (build day + code review + partner interviews).
+- **"Can you sponsor a visa?"** → We can hire candidates with existing US work authorization, support H-1B transfers, and sponsor TN visas for Canadian citizens. We cannot sponsor new H-1B visas from scratch.
+- **"What's the timeline?"** → Depends on interviewer and partner availability. Typically 2-4 weeks from phone screen to offer.
+
+---
+
+## Slack Recommendation Format
+
+3 sentences max, one paragraph. Background + signal + recommendation.
+
+```
+*New applicant: {Name}*
+{Company} -> {School}, {role}, {years} experience. {Key signal or red flag}.
+
+{emoji} *Recommendation:* {Archive/Dig deeper/Outreach} — {one-line reason}.
+
+Reply :+1: to {action}, or tell me to dig deeper.
+cc <@SLACK_USER_ID from user.md>
+```
