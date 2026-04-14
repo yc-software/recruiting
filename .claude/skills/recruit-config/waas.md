@@ -67,3 +67,15 @@ Use `mcp__waas__*` tools:
 - **Batch lookups**: Use `candidate_batch(short_ids)` instead of multiple `candidate_show` calls (max 25)
 - **WAAS as messaging channel**: Use `candidate_message_send` for WAAS-only candidates instead of Gmail — messages appear as emails to the candidate
 - **Dual-system sync**: When a candidate is in both WAAS and Ashby, update both systems (state in WAAS, stage in Ashby)
+
+### Replying to WAAS candidate emails via Gmail
+
+**IMPORTANT:** WAAS notification emails (e.g. "{Name} sent you a message") come FROM `workatastartup@ycombinator.com`, but replying to that address does NOT route to the candidate. The actual reply-to address is an `@inbound.ycombinator.com` address embedded in the email body as a mailto link.
+
+When replying to a WAAS candidate email via Gmail:
+1. Read the full email body using `gmail_get_message`
+2. Extract the `@inbound.ycombinator.com` address from the mailto link (pattern: `bf-j-*@inbound.ycombinator.com`)
+3. Send the reply TO that inbound address, NOT to `workatastartup@ycombinator.com`
+4. Use the original email's `threadId` to keep it threaded
+
+If the `@inbound.ycombinator.com` address cannot be found, fall back to `candidate_message_send` via the WAAS MCP tool instead.
