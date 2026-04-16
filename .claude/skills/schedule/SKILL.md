@@ -231,6 +231,11 @@ When scheduling tech screens (not phone screens), the process is different:
 
 **No hard line wrapping.** Write each paragraph as a single continuous line — let the email client handle wrapping. Never insert `\n` within a paragraph. Only use newlines between paragraphs.
 
+## Gmail & Calendar Rules
+
+- **ASCII only in emails.** No em dashes, curly quotes, or unicode. Use `--` instead of em dashes and straight quotes. The plain-text Gmail MCP tool mangles unicode into garbage.
+- **Phone screen calendar invites** use the title `<Candidate First Name> and Ryan` -- no "Phone Screen" label. Later stages (tech screen, onsite, partner) include the stage name.
+
 ## Rules
 
 1. **Always use America/Los_Angeles timezone.** The hiring manager's timezone is in user.md.

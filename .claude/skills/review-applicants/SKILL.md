@@ -232,6 +232,11 @@ mcp__waas__candidate_messages_list(short_id: "{short_id}")
 
 **Confirm before acting**: Always show the hiring manager exactly what you're about to do before executing write actions. Present the action, wait for approval, then execute.
 
+## Gmail & Calendar Rules
+
+- **ASCII only in emails.** No em dashes, curly quotes, or unicode. Use `--` instead of em dashes and straight quotes. The plain-text Gmail MCP tool mangles unicode into garbage.
+- **Phone screen calendar invites** use the title `<Candidate First Name> and Ryan` -- no "Phone Screen" label. Later stages (tech screen, onsite, partner) include the stage name.
+
 ## Rules
 
 1. **Present facts, not opinions on fit.** Tier by observable signals (location, company, school, work auth), not subjective quality judgments.

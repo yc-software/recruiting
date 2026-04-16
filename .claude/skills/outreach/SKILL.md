@@ -157,6 +157,11 @@ WAAS: moved to Reached Out.
 7. **New email, not a thread reply.** This creates a new thread — no threadId.
 8. **Move to Reached Out in Ashby after sending** (get stage ID from job config).
 
+## Gmail & Calendar Rules
+
+- **ASCII only in emails.** No em dashes, curly quotes, or unicode. Use `--` instead of em dashes and straight quotes. The plain-text Gmail MCP tool mangles unicode into garbage.
+- **Phone screen calendar invites** use the title `<Candidate First Name> and Ryan` -- no "Phone Screen" label. Later stages (tech screen, onsite, partner) include the stage name.
+
 ## Follow-Up Email Rules
 
 When drafting follow-up emails to candidates who haven't responded to initial outreach:

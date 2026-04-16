@@ -176,6 +176,11 @@ If the candidate is at Application Review and the hiring manager never contacted
 - **Ashby direct applicants with no thread**: Just archive in Ashby (no email needed — Ashby sends its own rejection if configured)
 - **J&J intros with no reply**: Just archive in Ashby (no email to the candidate; J&J handles it)
 
+## Gmail & Calendar Rules
+
+- **ASCII only in emails.** No em dashes, curly quotes, or unicode. Use `--` instead of em dashes and straight quotes. The plain-text Gmail MCP tool mangles unicode into garbage.
+- **Phone screen calendar invites** use the title `<Candidate First Name> and Ryan` -- no "Phone Screen" label. Later stages (tech screen, onsite, partner) include the stage name.
+
 ## Rules
 
 1. **NEVER send or archive without explicit approval.**

@@ -140,6 +140,11 @@ All user-specific values (email, Zoom link, office address, timezone) are in `us
 9. **Don't use "screen" or "interview" in candidate-facing calendar events.** Use the templates from the playbook.
 10. **Ask for a calendar block** for batch scheduling — don't guess at individual slots.
 
+## Gmail & Calendar Rules
+
+- **ASCII only in emails.** No em dashes, curly quotes, or unicode. Use `--` instead of em dashes and straight quotes. The plain-text Gmail MCP tool mangles unicode into garbage.
+- **Phone screen calendar invites** use the title `<Candidate First Name> and Ryan` -- no "Phone Screen" label. Later stages (tech screen, onsite, partner) include the stage name.
+
 ## Email Templates
 
 All templates are in the playbook at `.coding-agent-plans/recruiting-assistant.md`. Key templates:

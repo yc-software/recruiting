@@ -339,6 +339,11 @@ If the reply doesn't close out the candidate (e.g. scheduling, Q&A, follow-up), 
 10. **Read the playbook templates** (`.coding-agent-plans/recruiting-assistant.md`) for scheduling, advancement, and onsite situations. Use the hiring manager's established patterns.
 11. **When in doubt about tone, ask the user.** Better to ask than guess wrong.
 
+## Gmail & Calendar Rules
+
+- **ASCII only in emails.** No em dashes, curly quotes, or unicode. Use `--` instead of em dashes and straight quotes. The plain-text Gmail MCP tool mangles unicode into garbage.
+- **Phone screen calendar invites** use the title `<Candidate First Name> and Ryan` -- no "Phone Screen" label. Later stages (tech screen, onsite, partner) include the stage name.
+
 ## Follow-Up Email Rules
 
 When replying to candidates who haven't responded (follow-ups on cold outreach):
