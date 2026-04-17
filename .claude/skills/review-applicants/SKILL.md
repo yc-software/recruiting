@@ -236,6 +236,7 @@ mcp__waas__candidate_messages_list(short_id: "{short_id}")
 
 - **ASCII only in emails.** No em dashes, curly quotes, or unicode. Use `--` instead of em dashes and straight quotes. The plain-text Gmail MCP tool mangles unicode into garbage.
 - **Phone screen calendar invites** use the title `<Candidate First Name> and Ryan` -- no "Phone Screen" label. Later stages (tech screen, onsite, partner) include the stage name.
+- **Use `mcp__claude_ai_Gmail__gmail_create_draft`** (not `mcp__gmail-drafts__gmail_create_draft`) when creating email drafts. Set `contentType: "text/html"` and use `<p>` tags. The `gmail-drafts` tool only supports `text/plain` which hard-wraps lines at 78 characters, making emails look broken.
 
 ## Rules
 
