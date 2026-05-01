@@ -209,24 +209,6 @@ When drafting follow-up emails to candidates who haven't responded to initial ou
 - **Unlimited AI tokens** as a consistent selling point across all candidate types.
 - **Multi-role pitches**: Frequently pitch 2 roles in one email (PE + Technical CoS, or Community Builder + Technical CoS) -- works well for versatile candidates.
 
-## HN / Inbound Response Template
-
-When candidates reach out from Hacker News or cold inbound, use this pattern:
-
-```
-Thanks for reaching out! Email got flooded -- can you send a demo of you doing a walkthrough of the product + walkthrough of how you built it: what tools (AI or otherwise), architecture, tricky things about building it/seeing people use it?
-```
-
-Customize by referencing their specific product/project if mentioned.
-
-## Demo Request for Applicants
-
-When evaluating applicants, ask for live demos rather than GitHub repos:
-
-"Do you have anything live on the web that I could play with? A side project, a product, a tool -- anything that shows how you think about building things."
-
-Do NOT ask for GitHub repos -- the hiring manager wants to see shipped, usable products.
-
 ## Follow-up Cadence
 
 - **First outreach**: personalized, reference their background
