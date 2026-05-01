@@ -239,6 +239,33 @@ mcp__waas__candidate_messages_list(short_id: "{short_id}")
 - **Use `mcp__claude_ai_Gmail__gmail_create_draft`** (not `mcp__gmail-drafts__gmail_create_draft`) when creating email drafts. Set `contentType: "text/html"` and use `<p>` tags. The `gmail-drafts` tool only supports `text/plain` which hard-wraps lines at 78 characters, making emails look broken.
 - **Never create calendar invites until the candidate confirms the time.** Send the outreach or scheduling email first, wait for the candidate to reply confirming, then create the calendar event. Sending an unsolicited calendar invite before confirmation is presumptuous and creates a bad impression.
 
+## Resume Deep Review
+
+When the hiring manager asks for a deep review:
+
+1. Pull resumes for all Application Review candidates using `candidate_get_resume`
+2. Download PDFs to /tmp/ and read them
+3. Update Ashby notes with resume details for each candidate (use plain text, no HTML)
+4. Tier candidates based on the PE rubric
+5. Present the tiered results with background summaries
+
+Always check for fraud signals:
+- Broken LinkedIn URLs (e.g., `/in/c` or random characters)
+- Mismatched area codes vs claimed location
+- Check if Ashby flags the candidate as fraud in the UI
+- Multiple candidates with identical IP addresses or user agents in submission data
+
+## Batch Processing Leads
+
+When reviewing "Reached Out" or "New Lead" candidates in bulk:
+
+1. Cross-reference with Gmail to confirm outreach was actually sent
+2. For follow-ups, thread on existing email conversations
+3. After sending follow-ups, archive the lead application in Ashby
+4. For candidates with no email on file, flag them and ask the user
+5. Process in batches by date range (most recent first)
+6. Every candidate gets at least one follow-up before archiving
+
 ## Rules
 
 1. **Present facts, not opinions on fit.** Tier by observable signals (location, company, school, work auth), not subjective quality judgments.

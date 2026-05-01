@@ -238,6 +238,12 @@ When scheduling tech screens (not phone screens), the process is different:
 - **Use `mcp__claude_ai_Gmail__gmail_create_draft`** (not `mcp__gmail-drafts__gmail_create_draft`) when creating email drafts. Set `contentType: "text/html"` and use `<p>` tags. The `gmail-drafts` tool only supports `text/plain` which hard-wraps lines at 78 characters, making emails look broken.
 - **Never create calendar invites until the candidate confirms the time.** Send the outreach or scheduling email first, wait for the candidate to reply confirming, then create the calendar event. Sending an unsolicited calendar invite before confirmation is presumptuous and creates a bad impression.
 
+## Calendar Placeholder Pattern
+
+- **Holds/placeholders**: Use `notificationLevel: "NONE"` so the candidate does not receive a calendar invite for tentative holds.
+- **Confirmed meetings**: Use `notificationLevel: "ALL"` so all attendees receive the invite.
+- **When sending a hold**, also send a separate email with `[Hold]` in the subject line so the candidate knows the time is tentatively reserved.
+
 ## Rules
 
 1. **Always use America/Los_Angeles timezone.** The hiring manager's timezone is in user.md.

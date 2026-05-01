@@ -363,3 +363,8 @@ When replying to candidates who haven't responded (follow-ups on cold outreach):
 - **Two paragraphs max.** First paragraph: the hook + why their background is relevant. Second paragraph: the ask.
 - **The call-to-action must be on its own line**, separated from the body. Don't bury it in the middle of a paragraph.
 - **Combine the call time and coffee offer in one line:** "Would Thursday at 9am or Friday at 11am work for a call? Also happy to grab coffee at our Dogpatch office if you're nearby."
+
+## Threading Rules
+
+- **Always thread replies on existing conversations.** Use the `threadId` from the original email when creating drafts or sending replies. Never send a standalone email when a thread exists.
+- **Never start a new thread** if there is any prior email exchange with the candidate. Search Gmail first, find the thread, and reply in it.

@@ -38,6 +38,9 @@ Draft personalized cold outreach to a candidate the hiring manager has never con
 - `recruit-config/waas.md` — WAAS pipeline stages, job IDs, MCP tools` — Slack/Gmail config, source IDs, archive reasons
 - `recruit-config/CLAUDE.local.md` — Slack bot token (gitignored)
 - `recruit-config/jobs/product-engineer.md` — outreach template, tone rules, candidate bar, Ashby job/stage IDs
+- `recruit-config/jobs/technical-cos.md` — Technical Chief of Staff role playbook
+- `recruit-config/jobs/community-builder-ops-engineer.md` — Community Builder and Operations Engineer role playbook
+- `recruit-config/jobs/design-engineer.md` — Design Engineer role playbook
 
 These files are the source of truth for all job-specific and tone details. Do not hardcode any of those values in this skill.
 
@@ -185,3 +188,57 @@ When drafting follow-up emails to candidates who haven't responded to initial ou
 ### Process
 - **Always check Gmail for prior outreach** before presenting candidates as "never contacted." Search by both email and name.
 - **Use `contentType: "text/html"`** when creating drafts to avoid Gmail's plain text line wrapping.
+
+## Tone Rules
+
+- **"interesting fit" not "great fit"** -- softer, less presumptuous.
+- **"you've had experience" not "you clearly know"** -- too strong.
+- **Don't oversell specific background matches** -- keep it broader.
+- **Tone down academic credentials** -- lead with builder/founder energy, not degrees.
+- **"not sure if you'd be open to it, but..."** is a good soft pitch for non-obvious roles.
+- **"saw your profile and loved your energy"** works as an opener for builder types.
+
+## Outreach Framings by Candidate Type
+
+- **Applied AI + startups**: "I'm learning more about startups than I could have possibly imagined"
+- **Big AI company candidates (OpenAI, Meta AI)**: "you obviously don't need convincing on the AI front. But what I'd pitch you on is everything else."
+- **YC alumni/founders**: "Since you already know YC from the founder side, thought it'd be worth sharing what we're building on the software team"
+- **Reconnects**: "I might have reached out a while back, but things are moving fast here and wanted to reconnect" (say "might have" not "definitely did")
+- **Non-traditional backgrounds**: "We're looking for people with non-traditional backgrounds who can think across disciplines and build"
+- **YC as learning org**: "At its core, YC is a learning organization -- we teach founders how to build companies"
+- **Unlimited AI tokens** as a consistent selling point across all candidate types.
+- **Multi-role pitches**: Frequently pitch 2 roles in one email (PE + Technical CoS, or Community Builder + Technical CoS) -- works well for versatile candidates.
+
+## HN / Inbound Response Template
+
+When candidates reach out from Hacker News or cold inbound, use this pattern:
+
+```
+Thanks for reaching out! Email got flooded -- can you send a demo of you doing a walkthrough of the product + walkthrough of how you built it: what tools (AI or otherwise), architecture, tricky things about building it/seeing people use it?
+```
+
+Customize by referencing their specific product/project if mentioned.
+
+## Demo Request for Applicants
+
+When evaluating applicants, ask for live demos rather than GitHub repos:
+
+"Do you have anything live on the web that I could play with? A side project, a product, a tool -- anything that shows how you think about building things."
+
+Do NOT ask for GitHub repos -- the hiring manager wants to see shipped, usable products.
+
+## Follow-up Cadence
+
+- **First outreach**: personalized, reference their background
+- **Follow-up (7 days)**: shorter, personalized nudge, suggest specific time (Thursday AM)
+- **Last nudge (14+ days)**: very short, "last nudge from me", no pressure, just drop Zoom link
+- **After 2 follow-ups with no reply**: archive in Ashby, reactivate if they reply later
+
+## Fraud Detection
+
+Watch for these signals in Ashby applications:
+- LinkedIn URL is broken or just a few characters (e.g., `/in/c`)
+- Unusual LinkedIn slug patterns
+- Phone area code doesn't match claimed location
+- Check Ashby's fraudStatus field if available in the UI
+- Multiple candidates with identical IP addresses or user agents
