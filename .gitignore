@@ -5,5 +5,8 @@
 **/jobs/*.md
 !**/jobs/*.md.example
 
+# Internal-only skills (not shared publicly)
+.claude/skills/make-intros/
+
 # OS
 .DS_Store
