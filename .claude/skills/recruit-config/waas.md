@@ -52,6 +52,8 @@ Use `mcp__waas__*` tools:
 - `mcp__waas__candidate_status_show` — pipeline status (state, pipeline_stage, archive_reason, messaging timestamps)
 - `mcp__waas__candidate_messages_list` — all messages between company and candidate
 - `mcp__waas__candidate_notes_list` — all internal notes on a candidate
+- `mcp__waas__job_list` — list company's jobs with pipeline stages (id, title, state, stage names)
+- `mcp__waas__pipeline_show` — full pipeline board for a job — all stages with candidates (short_id, name, entered_at, state, needs_response)
 - `mcp__waas__health_check` — validate connection (returns ok/expired/error)
 
 ### Write tools
@@ -59,6 +61,8 @@ Use `mcp__waas__*` tools:
 - `mcp__waas__candidate_status_update` — update state + pipeline_stage (requires `waas:stages:manage`)
 - `mcp__waas__candidate_message_send` — send message to candidate (requires `waas:messages:manage`)
 - `mcp__waas__candidate_note_create` — add internal note to candidate (requires `waas:notes:manage`)
+- `mcp__waas__pipeline_move` — bulk-move candidates to a pipeline stage for a job (requires `waas:stages:manage`)
+- `mcp__waas__candidate_create` — add a new candidate to a job's pipeline with optional resume upload from a local file path. The candidate will only be visible to your company. Requires a real pipeline stage (e.g. "In Review") — "Applied" is not a stage, it's a virtual view of candidates who applied but haven't been placed yet. (requires `waas:candidates:manage`)
 
 ### Usage patterns
 
@@ -67,6 +71,7 @@ Use `mcp__waas__*` tools:
 - **Batch lookups**: Use `candidate_batch(short_ids)` instead of multiple `candidate_show` calls (max 25)
 - **WAAS as messaging channel**: Use `candidate_message_send` for WAAS-only candidates instead of Gmail — messages appear as emails to the candidate
 - **Dual-system sync**: When a candidate is in both WAAS and Ashby, update both systems (state in WAAS, stage in Ashby)
+- **Moving candidates**: Use `pipeline_move` to move candidates between pipeline stages — it works for all candidates. `candidate_status_update` can also update state (reviewing, archived, etc.) on any candidate.
 
 ### Replying to WAAS candidate emails via Gmail
 

@@ -22,6 +22,9 @@ allowed-tools:
   - mcp__waas__applicant_list
   - mcp__waas__candidate_batch
   - mcp__waas__health_check
+  - mcp__waas__job_list
+  - mcp__waas__pipeline_show
+  - mcp__waas__pipeline_move
 ---
 
 > **Note:** Read `recruit-config/user.md` for the hiring manager's name, email, and preferences. Do not hardcode any user-specific values.
@@ -50,15 +53,16 @@ Pull candidates from multiple sources to build the full list:
 
 1. **Ashby active applications**: First call `job_list()` to get all open jobs, then `application_list(status: "Active")` for each job — this is the primary source of truth for who's in the pipeline. Do NOT hardcode a single jobId; The hiring manager hires for multiple roles (Product Engineer, Investment Associate, Design Engineer, Recruiter, etc.).
 
-2. **WAAS applicants**: Use the WAAS MCP to pull all active applicants:
+2. **WAAS pipeline**: Use the WAAS MCP to pull the full pipeline board per job:
 ```
-mcp__waas__applicant_list(compact: true)
+mcp__waas__job_list()                          # discover jobs + stage names
+mcp__waas__pipeline_show(job_id: <id>)         # full kanban for each job
 ```
-**Always use `compact: true` for pipeline scans.** This returns slim payloads (~60% smaller) that fit within tool result limits. Full profiles are available via `candidate_show` for deep dives.
+`pipeline_show` returns every stage with its candidates (short_id, name, entered_at, state, needs_response). Call it for each job from `job_list`.
 
-This returns candidates who applied via Work at a Startup. WAAS applicants may or may not be in Ashby — the API is the source of truth for the WAAS pipeline.
+   For applicant-level detail (positions, educations, etc.), use `applicant_list(compact: true)` or `candidate_batch(short_ids)` (max 25 per call).
 
-   When you need richer profile data for multiple WAAS candidates, use `candidate_batch(short_ids)` (max 25 per call) instead of individual `candidate_show` calls.
+   To move candidates between stages: `mcp__waas__pipeline_move(job_id: <id>, short_ids: ["abc"], stage_name: "Screen")`
 
 3. **Gmail inbox**: `gmail_query_emails(query: "newer_than:21d (from:workatastartup OR from:jackandjill OR subject:'Reaching out from' OR subject:'Introduction:' OR subject:'Intro:' OR subject:'Follow up from YC')")` — catch candidates who are in email but may not be in Ashby yet.
 
