@@ -87,6 +87,21 @@ uv tool install git+https://github.com/ryankicks/mcp-ashby
 
 Google Workspace (Gmail, Calendar) uses Claude's built-in integrations — no install needed.
 
+#### Upgrading MCP servers
+
+When a new version of the MCP server is released, pull the latest and reinstall:
+
+```bash
+# If installed from git
+uv tool install git+https://github.com/yc-software/waas-mcp --force
+
+# If installed from a local clone
+cd /path/to/waas-mcp && git pull origin main
+uv tool install -e . --force
+```
+
+After reinstalling, restart Claude Code for the new tools to load. You can verify by asking Claude to search for the new tools (e.g. "do you have pipeline_show?").
+
 ### 3. Configure MCP servers
 
 Create a `.mcp.json` file in the root of this repo (not in `.claude/`). This is where Claude Code picks up project-scoped MCP servers:

@@ -143,11 +143,27 @@ Candidates where:
 ### In Consideration
 | # | Candidate | Background | Source | Status |
 
-### WAAS — In Progress (messaged)
-| # | Candidate | Background | WAAS State | Applied For | Last Messaged | Status |
+### WAAS Pipeline (by stage)
 
-### WAAS — Needs Response (not messaged)
-| # | Candidate | Background | WAAS State | Applied For | Applied At | Status |
+Use `pipeline_show(job_id)` for each job to get the full kanban view. Present each WAAS stage with its candidates:
+
+### WAAS — Offer
+| # | Candidate | Job | Since | Needs Response | Status |
+
+### WAAS — Interview
+| # | Candidate | Job | Since | Needs Response | Status |
+
+### WAAS — Screen
+| # | Candidate | Job | Since | Needs Response | Status |
+
+### WAAS — Reached Out
+| # | Candidate | Job | Since | Needs Response | Status |
+
+### WAAS — In Review
+| # | Candidate | Job | Since | Needs Response | Status |
+
+### WAAS — Applied (not yet staged)
+| # | Candidate | Job | Since | Needs Response | Status |
 ```
 
 **Priority section goes first** — the 🔴/🟡 tiers are the quick "what do I need to do" view. The full pipeline below gives the complete roster.
