@@ -8,5 +8,8 @@
 # Internal-only skills (not shared publicly)
 .claude/skills/make-intros/
 
+# Local MCP config
+.mcp.json
+
 # OS
 .DS_Store
