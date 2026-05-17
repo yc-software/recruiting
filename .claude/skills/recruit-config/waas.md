@@ -66,6 +66,7 @@ Use `mcp__waas__*` tools:
 
 ### Usage patterns
 
+- **Messages list is the inbound-classification source of truth**: Before drafting any outreach for a WAAS candidate, run `candidate_messages_list`. Any `from_candidate: true` message means this is a reply, not cold outreach — even when Ashby shows `sourceType: Sourced` and there is no WAAS notification email in Gmail. WAAS direct-messages do not generate Gmail notifications and do not set Ashby's `appliedViaJobPostingId`, so they look like pure sourcing unless you check messages. See `resolve-candidate.md` Step 0 for the full Applied vs. Direct-messaged vs. Sourced classification.
 - **Pre-flight**: Run `health_check` before any skill that depends on WAAS data
 - **Compact mode for triage**: Always use `applicant_list(compact: true)` for first-pass scanning (triage, pipeline, review-applicants). Returns ~60% smaller payloads that fit within tool result limits. Use full mode (no compact) only when you need email addresses, full work history, or complete looking_for text for a deep dive.
 - **Batch lookups**: Use `candidate_batch(short_ids)` instead of multiple `candidate_show` calls (max 25)
