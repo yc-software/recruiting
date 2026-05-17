@@ -15,6 +15,14 @@ API plumbing shared across all jobs and skills. These rarely change.
 |--------|-----|
 | Not a good match | `<your-archive-reason-id>` |
 
+### Archiving an application
+
+**Use `application_change_stage` with the Archived stage ID, not `application_update`.**
+
+To archive a candidate, call `application_change_stage(applicationId, interviewStageId: "<Archived stage ID from recruit-config/jobs/>", archiveReasonId: <reason ID>)`.
+
+⚠️ **Footgun:** `application_update` with `{"status": "Archived", "archiveReasonId": ...}` returns HTTP 200 success but **silently no-ops on the status field** — `currentInterviewStage` and `archiveReason` are unchanged. The only thing that moves is `updatedAt`. Always use `application_change_stage` and verify the response has `currentInterviewStage.title == "Archived"` and a populated `archiveReason`.
+
 ## Interview Feedback
 
 Use these when submitting interview feedback via `application_feedback_submit`.
