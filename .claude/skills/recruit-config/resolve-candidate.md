@@ -8,6 +8,27 @@ Other skills should reference this file when they need to look up a candidate.
 When a skill needs to resolve a candidate (by name, short_id, or email), follow this procedure.
 Run all sources in parallel where possible.
 
+## Step 0: Classify the inbound (do this FIRST)
+
+Before drafting any outreach, determine which of three categories the candidate is in. This decides whether the next message is a reply or cold outreach — and skipping this step is the most common way to misframe a draft.
+
+Run two calls in parallel:
+1. `mcp__waas__candidate_messages_list(short_id)` — WAAS conversation
+2. `application_info(applicationId)` — Ashby application (if known)
+
+Then label:
+
+| Category               | Signal                                                                                                                 | Channel for outreach                          |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| **Applied**            | Ashby `appliedViaJobPostingId` non-null OR `submitterUserAgent` non-null OR a WAAS "X applied for Y" email is in Gmail | Reply on the application thread               |
+| **Direct-messaged YC** | WAAS messages has any `from_candidate: true` entry, AND not Applied                                                    | Reply via `mcp__waas__candidate_message_send` |
+| **Sourced** (pure)     | No candidate-initiated messages AND not Applied                                                                        | Cold outreach via WAAS message                |
+
+**Important gotchas:**
+- Ashby `sourceType: Sourced` is NOT the same as the "Sourced" category above. Ashby labels both pure-sourced AND WAAS-direct-message candidates as `sourceType: Sourced`. Only `candidate_messages_list` distinguishes them.
+- Absence of a Gmail "X applied for Y" notification does NOT mean the candidate has not contacted YC. WAAS direct-messages (candidate clicks "Message YC" on a profile rather than Apply on a posting) do not generate Gmail notifications and do not set `appliedViaJobPostingId` — they will look like pure sourcing unless you check messages.
+- Triage output that says `Applied: <job>` is descriptive, not authoritative — it can reflect a scoring/job-match inference, not a formal application event. Verify with `application_info` before treating the candidate as an applicant.
+
 ## Step 1: Identify the candidate
 
 Start with whatever you have:
