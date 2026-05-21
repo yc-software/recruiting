@@ -46,7 +46,7 @@ Use `mcp__waas__*` tools:
 
 ### Read tools
 
-- `mcp__waas__applicant_list` — list/filter applicants (by state, needs_response, job_id, since, limit, offset)
+- `mcp__waas__applicant_list` — list/filter applicants (by state, needs_response, job_id, since, cursor)
 - `mcp__waas__candidate_show` — single candidate profile by short_id (positions, educations, work auth)
 - `mcp__waas__candidate_batch` — batch lookup up to 25 candidates by comma-separated short_ids
 - `mcp__waas__candidate_status_show` — pipeline status (state, pipeline_stage, archive_reason, messaging timestamps)
