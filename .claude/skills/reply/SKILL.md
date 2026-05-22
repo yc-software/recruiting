@@ -352,21 +352,73 @@ If the reply doesn't close out the candidate (e.g. scheduling, Q&A, follow-up), 
 
 ## Follow-Up Email Rules
 
-When replying to candidates who haven't responded (follow-ups on cold outreach):
+When replying to candidates who haven't responded (follow-ups on cold outreach).
+
+**Canonical reference:** Read `VOICE-NOTES.md` section 9 ("Follow-up technique -- the wider-aperture move") before drafting any follow-up. It contains the full technique writeup, the canonical template, and two real Ryan sends from 2026-05-22 as worked examples. The rules below are the short form.
 
 ### Tone
 - **Don't say "following up," "circling back," "bumping this," "last note from me," or "I know I've tried a couple times."** The recipient doesn't care about your outreach cadence. Get to the strongest lead immediately.
 - **No hyperbole.** Don't use "exactly," "perfect fit," "ideal candidate," or superlatives about the candidate's background.
 - **Don't flatter.** Don't say things like "exactly the depth we need" about their experience. It reads as recruiter-speak.
+- **Soft opener that acknowledges friction without naming it.** *"Perhaps not great timing, but..."* is the canonical Ryan-voice equivalent. One short phrase, then move on. Don't extend, don't apologize twice, don't explain that you're following up.
 
-### Content
-- **Follow the tone and content rules in the job playbook** (`recruit-config/jobs/`) for role-specific framing, hooks, and what to emphasize.
-- **Personalize based on their background** — reference specific things they've built or done, not generic bullet points.
+### Content -- the wider-aperture move
+- **The follow-up is a *wider* version of the first ask, not a *louder* one.** The first email was "come work in our software team." The follow-up should be "come into YC at all -- as founder OR engineer -- and let's just talk for 20 minutes." Lower stakes, more options, less commitment.
+- **Widen YC from "the role" to "the ecosystem"** when the candidate's background supports it (founder DNA, prior YC application, currently at a YC company, just started a new gig and unlikely to leave for *this* role specifically). Phrase: *"if you're curious about YC -- either as a future founder or in our software team --"*.
+- **Reframe the hook as fit-for-role, not biography.** Take **two attributes** of their background and map them to **what they'd get to do at YC**: *"The work you've done in [A] + [B] is a fit for a role at YC where you'd get to [exercise/express] both, have a huge impact for founders, and learn more about startups than you'd ever imagine."*
+- **Follow the tone and content rules in the job playbook** (`jobs/<role>.md`) for role-specific framing.
+- **Personalize based on their background** — the two-attribute combination should come from things they've actually built or done. Source-verify from Ashby resume / WAAS profile / their prior message in-thread.
 
 ### Structure
-- **Two paragraphs max.** First paragraph: the hook + why their background is relevant. Second paragraph: the ask.
-- **The call-to-action must be on its own line**, separated from the body. Don't bury it in the middle of a paragraph.
-- **Combine the call time and coffee offer in one line:** "Would Thursday at 9am or Friday at 11am work for a call? Also happy to grab coffee at our Dogpatch office if you're nearby."
+- **3 short paragraphs.** Para 1: soft opener + the wider-aperture frame. Para 2: the two-attribute fit statement (with optional comp parenthetical). Para 3: the ask, anchored to two specific times.
+- **Anchor two specific times** in the CTA, not open-ended *"any time this week or next"*: *"Thursday at 10am or Friday at 1pm PT are open for me. Happy to do Zoom or grab coffee near our office in the Dogpatch."*
+- **Drop the rigid 3-bullet middle.** It's already in the first email above this one in the thread. If you want to surface comp/perks, put it in a parenthetical: *"(and get paid pretty well too. :P)"*.
+- **Sign off `Ryan` alone.** Optionally precede with *"Hope to hear from you!"* or *"Hope to hear from you, and have a great extended weekend!"* (the latter only when the calendar has a real detail to acknowledge).
+
+### Canonical examples
+
+Real Ryan sends, 2026-05-22, both in-thread replies to cold outreaches that went unanswered for 8 days. Mirror these:
+
+**Skylar Gordon** (MIT → Regard → Stratos → Vast AI; engineering pathway):
+
+```
+Hey Skylar,
+
+Perhaps not great timing, but if you're curious about YC -- either as a future founder or in our software team -- I would love to find 20 minutes to chat.
+
+The work you've done in AI systems + working at early stage startups is a fit for a role at YC where you'd get to exercise both, have a huge impact for founders, and learn more about startups than you'd ever imagine. (and get paid pretty well too. :P)
+
+If you're open to it, Thursday at 10am or Friday at 1pm PT are open for me. Happy to do Zoom or grab coffee near our office in the Dogpatch.
+
+Hope to hear from you, and have a great extended weekend!
+
+Ryan
+```
+
+**Alexandria Yip** (just started at E2B, applied to YC previously; founder-track candidate):
+
+```
+Hey Alexandria,
+
+Perhaps not great timing, but if you're curious about YC -- either as a founder or in our software team -- I would love to find 20 minutes to chat.
+
+The work you've done in both ops + SW is a fit for a role at YC where you'd get to express both, have a huge impact for founders, and learn more about startups (and get paid pretty well) than you'd ever imagine.
+
+If you're open to it, Thursday at 10am or Friday at 1pm PT are open for me. Happy to do Zoom or grab coffee near our office in the Dogpatch.
+
+Hope to hear from you, and have a great extended weekend!
+
+Ryan
+```
+
+### Follow-up drift-check (in addition to the standard one in BEFORE-DRAFTING.md)
+
+1. **No cadence-acknowledgment opener.** *"Perhaps not great timing"* yes; *"following up"*, *"circling back"*, *"haven't heard back so wanted to..."* no.
+2. **Aperture widened.** Did I offer YC as ecosystem (founder OR engineer)? Skip only if the candidate's background gives no founder signal.
+3. **Hook reframed as fit-for-role.** Two-attribute combo + *"a fit for a role at YC where you'd get to [verb] both"*.
+4. **Specific times anchored.** Two slots, not open-ended.
+5. **No rigid 3-bullet middle.** Comp/perks in a parenthetical if surfaced at all.
+6. **3 short paragraphs.** Anything longer is over-explaining.
 
 ## Threading Rules
 
