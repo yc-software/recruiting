@@ -23,6 +23,10 @@ allowed-tools:
   - Bash
 ---
 
+> **OpenClaw note (read this first):** the `allowed-tools` list above uses Claude-Code MCP names. On OpenClaw, substitute: `gog --account ryan@ycombinator.com gmail/calendar/...` for Google Workspace, `curl` against `https://api.ashbyhq.com` (HTTP Basic with `/data/.ashby/api_key`, always set `User-Agent`) for Ashby, `curl` against `https://api.ycombinator.com` (Bearer token from `/data/.yc/waas-credentials.json`) for WAAS. Behavior the skill prescribes is the source of truth, not the literal tool names. Full mapping: `recruiting/.claude/skills/_meta/BEFORE-DRAFTING.md` section 5.
+
+> **Before drafting any candidate-facing content, read `recruiting/.claude/skills/_meta/BEFORE-DRAFTING.md` first.** It tells you which voice/job/playbook files to load and the drift-check to run before showing a draft.
+
 > **Note:** Read `recruit-config/user.md` for the hiring manager's name, email, and preferences. Do not hardcode any user-specific values.
 
 
